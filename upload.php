@@ -3,15 +3,19 @@
 /*
 * Author: Rohit Patel
 * Date: 12-08-2014
-* App Name: Ajax file uploader
-* Description: PHP + Ajax file upload with progress bar
+* App Name: Ajax file uploaded
+* Description: PHP + Ajajx file upload with progress bar
 */
 
-if(($_GET['del'] == 1) && (isset($_GET['del']))) {
-  if (file_exists("upload/" . $_GET['fileName'])) {
-   unlink("upload/" . $_GET['fileName']);
-   echo json_encode(array('type'=>'success', 'msg'=>'File deleted successfully.')); 
+if(($_POST['del'] == 1) && (isset($_POST['del']))) {
+  if (file_exists($_POST['filePath'])) {
+   unlink($_POST['filePath']);
+   $data = json_encode(array('type'=>'success', 'msg'=>'File deleted successfully.')); 
+  } else {
+   $data = json_encode(array('type'=>'error', 'msg'=>'Can not delete, File not exist.'));
   }
+  echo $data;
+  exit;
 } else {
     $allowFile = array('image/png','image/jpeg','image/gif','image/jpg');
     if(empty($_FILES["file"]["name"])) {

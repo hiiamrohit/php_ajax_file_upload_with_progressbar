@@ -1,10 +1,5 @@
 <?php
-/*
-* Author: Rohit Patel
-* Date: 12-08-2014
-* App Name: Ajax file uploader
-* Description: PHP + Ajax file upload with progress bar
-*/
+error_reporting(0);
 ?>
 <div style="width:60%; margin:0 auto;">
 <h1>Image upload in php with progress bar! </h1>
@@ -16,22 +11,18 @@
     <input type="button" value="Upload image" class="upload" />
 </form>
 <div id="progBar" style="display:none;">
-  <progress value="0" max="100" style="width:800px;"></progress><span id="prog">0%</span>
+  <progress value="0" max="100" style="width:750px;"></progress><span id="prog" style="font-weight:bold;">0%</span>
 </div>
 <div id="alertMsg" style="font-size:16px; color:blue; display:none;"></div>
 <h3>List of uploaded files</h3>
-<table border=1 width=100% id="tb">
+<table border=1 width=100% id="tb" align="left">
+<tr style="display:none;"><td colspan=2 ></td></tr>
 <?php 
-$dir = "upload";
-if (is_dir($dir)) {
-    if ($dh = opendir($dir)) {
-    $i=0;
-        while (($file = readdir($dh)) !== false) {      
-             echo "<tr id='row".$i."'><td><a href='upload/".$file."' target='_blank'><img src='upload/".$file."' width=200 height=200></a></td><td><a href='javascript:void(0);' id='delete' rmid='row".$i."' filename='".$file."'>Delete</td></tr>";
-             $i++;
-        }
-        closedir($dh);
-    }
+  $dir = "upload/";
+  $i=0;
+    foreach(glob($dir."{*.jpg,*.gif,*.png,*.jpeg}", GLOB_BRACE) as $file){ 
+             echo "<tr id='row".$i."'><td><a href='".$file."' target='_blank'><img src='".$file."' width=200 height=200></a></td><td><a href='javascript:void(0);' id='delete' rmid='row".$i."' filename='".$file."'>Delete</td></tr>";
+             $i++;    
 }
 
 ?>
