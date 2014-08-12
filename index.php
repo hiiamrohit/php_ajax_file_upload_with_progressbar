@@ -1,5 +1,10 @@
 <?php
-
+/*
+* Author: Rohit Patel
+* Date: 12-08-2014
+* App Name: Ajax file uploaded
+* Description: PHP + Ajajx file upload with progress bar
+*/
 ?>
 <div style="width:60%; margin:0 auto;">
 <h1>Image upload in php with progress bar! </h1>
