@@ -4,7 +4,7 @@
 * Author: Rohit Patel
 * Date: 12-08-2014
 * App Name: Ajax file uploaded
-* Description: PHP + Ajajx file upload with progress bar
+* Description: PHP + Ajax file upload with progress bar
 */
 
 if(($_GET['del'] == 1) && (isset($_GET['del']))) {
