@@ -34,6 +34,10 @@ $(function() {
         $(".upload").removeAttr('disabled');
         $("#progBar").hide();
         resetProgressBar();
+      },
+      error: function(e) {
+         alert(e.status+" error occurred to upload image!");
+        window.location.href=window.location.href;
       }    
    });  
  });
@@ -71,11 +75,15 @@ $(document).on('click','#delete',function() {
         dataType: 'json',
         data:{del:1,filePath:filePath},
         success:function(res){
-        if(res.type=='success') {
-          $("table#tb tr#"+rmid).remove();
-          }
-          flashMsg(res.msg);
-        }
+                if(res.type=='success') {
+                  $("table#tb tr#"+rmid).remove();
+                  }
+                  flashMsg(res.msg);
+                },
+        error: function(e) {
+                alert(e.status+" error occurred to delete image!");
+                window.location.href=window.location.href;
+               } 
     });
 });
 

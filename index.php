@@ -1,14 +1,8 @@
 <?php
-/*
-* Author: Rohit Patel
-* Date: 12-08-2014
-* App Name: Ajax file uploader
-* Description: PHP + Ajax file upload with progress bar
-*/
 error_reporting(0);
 ?>
 <div style="width:60%; margin:0 auto;">
-<h2>Image upload with progress bar using Ajax+Php </h2>
+<h1>Image upload in php with progress bar! </h1>
 <div style="border:1px solid; padding:10px 10px 10px 10px; float:left; width:800px;">
 <form enctype="multipart/form-data" id="myform">  
    <b>Choose Image to upload.</b><br/>
