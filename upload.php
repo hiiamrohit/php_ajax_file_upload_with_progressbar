@@ -3,8 +3,8 @@
 /*
 * Author: Rohit Patel
 * Date: 12-08-2014
-* App Name: Ajax file uploaded
-* Description: PHP + Ajajx file upload with progress bar
+* App Name: Ajax file uploader
+* Description: PHP + Ajajx file uploader with progress bar
 */
 
 if(($_POST['del'] == 1) && (isset($_POST['del']))) {
