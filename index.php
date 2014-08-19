@@ -3,7 +3,7 @@
 * Author: Rohit Patel
 * Date: 12-08-2014
 * App Name: Ajax file uploader
-* Description: PHP + Ajajx file uploader with progress bar
+* Description: PHP + Ajax file uploader with progress bar
 */
 
 error_reporting(0);
