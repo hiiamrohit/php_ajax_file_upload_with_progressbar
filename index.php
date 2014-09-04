@@ -1,15 +1,15 @@
 <?php
-/*
-* Author: Rohit Patel
-* Date: 12-08-2014
-* App Name: Ajax file uploader
-* Description: PHP + Ajax file uploader with progress bar
-*/
-
 error_reporting(0);
 ?>
+<!DOCTYPE html>
+<html lang="en-US">
+<title>Image upload in php+ajax with progress bar!</title>
+<meta charset="utf-8">
+<meta name="Keywords" content="Image upload in php and ajax with progress bar">
+<meta name="Description" content="Image upload in php and ajax with progress bar">
+<body>
 <div style="width:60%; margin:0 auto;">
-<h1>Image upload in php with progress bar! </h1>
+<h2>Image upload in php+ajax with progress bar! <a href="https://github.com/rohit0kumar/php_ajax_file_upload_with_progressbar" target="_blank">Download</a></h2>
 <div style="border:1px solid; padding:10px 10px 10px 10px; float:left; width:800px;">
 <form enctype="multipart/form-data" id="myform">  
    <b>Choose Image to upload.</b><br/>
@@ -28,14 +28,15 @@ error_reporting(0);
   $dir = "upload/";
   $i=0;
     foreach(glob($dir."{*.jpg,*.gif,*.png,*.jpeg}", GLOB_BRACE) as $file){ 
-             echo "<tr id='row".$i."'><td><a href='".$file."' target='_blank'><img src='".$file."' width=200 height=200></a></td><td><a href='javascript:void(0);' id='delete' rmid='row".$i."' filename='".$file."'>Delete</td></tr>";
+             echo "<tr id='row".$i."'><td><a href='".$file."' target='_blank'><img src='".$file."' width=200 height=200></a></td><td><a href='javascript:void(0);' id='delete' rmid='row".$i."' filename='".$file."'>Delete</a></td></tr>";
              $i++;    
 }
 
 ?>
-
-</table>
-</div>
-<div>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="js/upload.js"></script>
+   </table>
+  </div>
+ </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="js/upload.js"></script>
+ </body>
+</html>
