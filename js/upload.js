@@ -58,9 +58,7 @@ $(function() {
     
 // Flash message 
  function flashMsg(msg) {
-        $("#alertMsg").fadeIn(1000);
-        $("#alertMsg").html(msg);
-        $("#alertMsg").fadeOut(5000);
+        $("#alertMsg").fadeIn(1000).html(msg).fadeOut(5000);
  }
  
  // Delete function
